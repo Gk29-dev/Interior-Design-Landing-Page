@@ -5,7 +5,6 @@
     padding:0;
 }
 body{
-    height: 100vh;
     background-image: url('./images/living-room.jpg');
     background-size: cover;
     background-position: center;
@@ -47,6 +46,9 @@ main{
 }
 .phone-number{
     font-size:14px;
+}
+.hamburger{
+    display: none;
 }
 .header-footer{
     margin-top: 40px;
@@ -112,7 +114,7 @@ main{
 .user-tag-text, .light-text{
     font-size:13px;
     font-weight: 500;
-    margin-top: -40px;
+    margin-top: 20px;
     padding-bottom: 15px;
 }
 .design-one, .design-two{
@@ -143,9 +145,19 @@ main{
     display: flex;
     flex-direction: row;
 }
-.light-svg svg{
-    position:relative;
-    right:130px;
+.light-img{
+    background-color: #fff;
+    margin-top:30px;
+    width: 50%;
+    border-radius : 20px;
+}
+.light-img img{
+    display: block;
+    height: 30px;
+    padding-top:10px;
+    padding-bottom: 10px;  
+    margin-left:auto;
+    margin-right:auto;  
 }
 .design-two{
     right:-14%;
@@ -164,4 +176,48 @@ main{
     position:absolute;
     left:100%;
     margin-top: -9px;
+}
+
+/* media query for mobile */
+@media screen and (max-width:576px) {
+    .list-items,.phone-section{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+        font-size:30px;
+    }
+    .main-content{
+        flex-direction: column;
+    } 
+    .left-section,.right-section{
+        width:100%;
+    } 
+    .left-section .left{
+        margin-left: 0px;
+    } 
+    .left-button{
+        margin-top: 30px;
+    }
+    .right-section{
+        margin-top: 40px;
+    }
+    .right-section .user-tag{
+        width:100%;
+        position: static;
+    }
+    .user-tag-text, .light-text{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .user-tag-text, .light-text {
+        font-size:21px;
+    }
+    .design-one, .design-two{
+        display: none;
+    }
+    .light-section {
+        width: 100%;
+        top:40%
+    }
 }
